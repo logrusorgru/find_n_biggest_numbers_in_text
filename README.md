@@ -2,6 +2,7 @@ FindNBiggestNumbersInText
 =========================
 
 [![Build Status](https://travis-ci.org/logrusorgru/find_n_biggest_numbers_in_text.svg?branch=master)](https://travis-ci.org/logrusorgru/find_n_biggest_numbers_in_text)
+[![Coverage Status](https://coveralls.io/repos/github/logrusorgru/find_n_biggest_numbers_in_text/badge.svg?branch=master)](https://coveralls.io/github/logrusorgru/find_n_biggest_numbers_in_text?branch=master)
 
 Find set of biggest numbers in a stdin. It looks for decimal integers
 numbers only regardless a sign.

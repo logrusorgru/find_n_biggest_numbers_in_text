@@ -1,6 +1,9 @@
 
 require "minitest/autorun"
+require 'coveralls'
 require "find_n_biggest_numbers_in_text"
+
+Coveralls.wear!
 
 class FindNBiggestNumbersInTextTest < MiniTest::Test
 
