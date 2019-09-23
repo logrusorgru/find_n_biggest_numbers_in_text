@@ -1,9 +1,12 @@
 
-require "minitest/autorun"
 require 'coveralls'
-require "find_n_biggest_numbers_in_text"
 
-Coveralls.wear!
+Coveralls.wear! do
+	add_filter "test/test_"
+end
+
+require "minitest/autorun"
+require "find_n_biggest_numbers_in_text"
 
 class FindNBiggestNumbersInTextTest < MiniTest::Test
 
@@ -24,17 +27,13 @@ class FindNBiggestNumbersInTextTest < MiniTest::Test
 	end
 
 	def test_large_number_exception
-		got_exception = false
-		begin
-			long = "" # 10 x 10 x 10 = 1000
-			101.times do |i|
-				long += "1234567890"
-			end
-			new_finder.find(long, 10)	
-		rescue
-			got_exception = true
+		long = "" # 10 x 10 x 10 = 1000
+		101.times do |i|
+			long += "1234567890"
 		end
-		assert_equal true, got_exception
+		assert_raises (FindNBiggestNumbersInText::Error) do
+			new_finder.find(long, 10)
+		end
 	end
 
 	def test_numbers_limit
