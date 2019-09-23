@@ -6,6 +6,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    minitest (5.12.0)
     rake (10.5.0)
 
 PLATFORMS
@@ -14,6 +15,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 2.0)
   find_n_biggest_numbers_in_text!
+  minitest
   rake (~> 10.0)
 
 BUNDLED WITH
